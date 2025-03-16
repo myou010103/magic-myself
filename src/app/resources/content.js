@@ -17,8 +17,8 @@ const newsletter = {
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
-     I occasionally write about design, technology, and share thoughts on the intersection of
-       creativity and engineering.
+     Life is like a game of chess; once you make a move, there’s no turning back.
+  
    </>
   ),
 };
