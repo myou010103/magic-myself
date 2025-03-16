@@ -8,7 +8,7 @@ const person = {
   },
   role: "Day Dreamer",
   avatar: "/images/avatar.jpg",
-  location: "Asia/Suzhou", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  location: "Asia/Beijing", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "Chinese"], // optional: Leave the array empty if you don't want to display languages
 };
 
