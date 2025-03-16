@@ -1,15 +1,15 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-  firstName: "M",
+  firstName: "Selene",
   lastName: "Yu",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
   role: "Design Engineer",
   avatar: "/images/avatar.jpg",
-  location: "Asia/China", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Chinese"], // optional: Leave the array empty if you don't want to display languages
+  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
@@ -17,9 +17,9 @@ const newsletter = {
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
-      May the force be with you.
-      
-    </>
+     I occasionally write about design, technology, and share thoughts on the intersection of
+       creativity and engineering.
+   </>
   ),
 };
 
@@ -81,9 +81,9 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Happy every day.
-
-      
+         Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
+         into simple, elegant design solutions. Her work spans digital interfaces, interactive
+         experiences, and the convergence of design and technology.
       </>
     ),
   },
