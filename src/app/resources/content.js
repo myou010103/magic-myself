@@ -18,6 +18,7 @@ const newsletter = {
   description: (
     <>
       May the force be with you.
+      
     </>
   ),
 };
@@ -81,6 +82,8 @@ const about = {
     description: (
       <>
         Happy every day.
+
+      
       </>
     ),
   },
