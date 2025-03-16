@@ -189,7 +189,7 @@ const about = {
 };
 
 const blog = {
-  label: "Blog",
+  label: "待更新",
   title: "待更新",
   description: `待更新`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
