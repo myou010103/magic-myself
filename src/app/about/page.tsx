@@ -1,14 +1,3 @@
-export default function About() {
-  return (
-    <div>
-      <h1>Welcome to My Website</h1>
-      <audio controls autoPlay loop>
-        <source src="/music/background.m4a"  type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
-    </div>
-  );
-}
 import {
   Avatar,
   Button,
