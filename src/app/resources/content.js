@@ -81,9 +81,10 @@ const about = {
     title: "Introduction",
     description: (
       <>
-         Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-         into simple, elegant design solutions. Her work spans digital interfaces, interactive
-         experiences, and the convergence of design and technology.
+         我不明白，为什么大家都在谈论着项羽被困垓下，仿佛这中原古战场对我们决定了凶多吉少。
+      二十年前，我从徐州踏上征途，开始了第二次北伐，中华秋叶海棠遂归于一统。
+      本党本军所到之处，民众竭诚欢迎，真可谓占尽天时，那种勃勃生机、万物竟发的境界，犹在眼前。
+      短短二十年之后，这里竟至于一变而成为我们的葬身之地了么？无论怎么样，会战兵力是以八十万对六十万，优势在我！
       </>
     ),
   },
