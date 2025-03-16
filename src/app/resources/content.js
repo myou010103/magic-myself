@@ -1,7 +1,7 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-  firstName: "Modian",
+  firstName: "Justin",
   lastName: "Yu",
   get name() {
     return `${this.firstName} ${this.lastName}`;
@@ -90,20 +90,20 @@ const about = {
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "Recommended Games",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Destiny 2",
+        timeframe: "2020 - Present",
+        role: "RPG",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            《命运2》的故事发生在未来，人类在“黄金时代”后遭遇了“黑暗时代”，幸存者在“旅行者”（The Traveler）的庇护下重建文明。
+          玩家扮演“守护者”（Guardian），通过使用“光能”（Light）和“暗影”（Darkness）的力量，对抗各种外星种族和威胁。
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            游戏探讨了光明与黑暗的平衡、人类的生存与希望，以及守护者的使命与责任。
+          
           </>,
         ],
         images: [
@@ -117,17 +117,17 @@ const about = {
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Valorant",
+        timeframe: "2022 - 2025",
+        role: "FPS",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            世界观：游戏设定在近未来的地球，玩家扮演“特工”（Agent），隶属于两个敌对组织：攻击方（Attackers）和防守方（Defenders）。
+            核心主题：围绕战术配合、技能运用和团队协作展开，强调策略与枪法的结合。
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            每个特工拥有四个独特技能，包括一个终极技能（Ultimate），需要根据战局灵活使用。
+              
           </>,
         ],
         images: [],
