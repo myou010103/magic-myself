@@ -38,7 +38,7 @@ export async function generateMetadata() {
 }
 
 export default function Home() {
- return (
+  return (
     <Column maxWidth="m" gap="xl" horizontal="center">
       <script
         type="application/ld+json"
