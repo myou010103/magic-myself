@@ -38,17 +38,7 @@ export async function generateMetadata() {
 }
 
 export default function Home() {
-  return (
-    <div>
-      <h1>Welcome to My Website</h1>
-      <audio controls autoPlay loop>
-        <source src="/music/background.mp3"  type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
-    </div>
-  );
-}
-  return (
+ return (
     <Column maxWidth="m" gap="xl" horizontal="center">
       <script
         type="application/ld+json"
