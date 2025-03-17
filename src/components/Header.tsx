@@ -1,22 +1,22 @@
 "use client";
-
+ 
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
-
+import { useEffect, useState, useRef } from "react";
+ 
 import { Fade, Flex, Line, ToggleButton } from "@/once-ui/components";
-import styles from "@/components/Header.module.scss";
-
+import styles from "@/components/Header.module.scss"; 
+ 
 import { routes, display } from "@/app/resources";
 import { person, home, about, blog, work, gallery } from "@/app/resources/content";
-
+ 
 type TimeDisplayProps = {
   timeZone: string;
   locale?: string; // Optionally allow locale, defaulting to 'en-GB'
 };
-
+ 
 const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "en-GB" }) => {
   const [currentTime, setCurrentTime] = useState("");
-
+ 
   useEffect(() => {
     const updateTime = () => {
       const now = new Date();
@@ -30,39 +30,50 @@ const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "en-GB" })
       const timeString = new Intl.DateTimeFormat(locale, options).format(now);
       setCurrentTime(timeString);
     };
-
+ 
     updateTime();
     const intervalId = setInterval(updateTime, 1000);
-
+ 
     return () => clearInterval(intervalId);
   }, [timeZone, locale]);
-
+ 
   return <>{currentTime}</>;
 };
-
+ 
 export default TimeDisplay;
-
+ 
 export const Header = () => {
   const pathname = usePathname() ?? "";
-
+  const audioRef = useRef<HTMLAudioElement>(null);
+ 
+  // 尝试自动播放音频 
+  useEffect(() => {
+    const audio = audioRef.current; 
+    if (audio) {
+      audio.play().catch(()  => {
+        console.log("Autoplay  failed, user interaction required.");
+      });
+    }
+  }, []);
+ 
   return (
     <>
       <Fade hide="s" fillWidth position="fixed" height="80" zIndex={9} />
       <Fade show="s" fillWidth position="fixed" bottom="0" to="top" height="80" zIndex={9} />
-      <Flex
-        fitHeight
-        className={styles.position}
+      <Flex 
+        fitHeight 
+        className={styles.position} 
         as="header"
         zIndex={9}
-        fillWidth
+        fillWidth 
         padding="8"
         horizontal="center"
       >
         <Flex paddingLeft="12" fillWidth vertical="center" textVariant="body-default-s">
-          {display.location && <Flex hide="s">{person.location}</Flex>}
+          {display.location  && <Flex hide="s">{person.location}</Flex>} 
         </Flex>
         <Flex fillWidth horizontal="center">
-          <Flex
+          <Flex 
             background="surface"
             border="neutral-medium"
             radius="m-4"
@@ -77,14 +88,14 @@ export const Header = () => {
               <Line vert maxHeight="24" />
               {routes["/about"] && (
                 <>
-                  <ToggleButton
+                  <ToggleButton 
                     className="s-flex-hide"
                     prefixIcon="person"
                     href="/about"
-                    label={about.label}
+                    label={about.label} 
                     selected={pathname === "/about"}
                   />
-                  <ToggleButton
+                  <ToggleButton 
                     className="s-flex-show"
                     prefixIcon="person"
                     href="/about"
@@ -94,52 +105,52 @@ export const Header = () => {
               )}
               {routes["/work"] && (
                 <>
-                  <ToggleButton
+                  <ToggleButton 
                     className="s-flex-hide"
                     prefixIcon="grid"
                     href="/work"
-                    label={work.label}
-                    selected={pathname.startsWith("/work")}
+                    label={work.label} 
+                    selected={pathname.startsWith("/work")} 
                   />
-                  <ToggleButton
+                  <ToggleButton 
                     className="s-flex-show"
                     prefixIcon="grid"
                     href="/work"
-                    selected={pathname.startsWith("/work")}
+                    selected={pathname.startsWith("/work")} 
                   />
                 </>
               )}
               {routes["/blog"] && (
                 <>
-                  <ToggleButton
+                  <ToggleButton 
                     className="s-flex-hide"
                     prefixIcon="book"
                     href="/blog"
-                    label={blog.label}
-                    selected={pathname.startsWith("/blog")}
+                    label={blog.label} 
+                    selected={pathname.startsWith("/blog")} 
                   />
-                  <ToggleButton
+                  <ToggleButton 
                     className="s-flex-show"
                     prefixIcon="book"
                     href="/blog"
-                    selected={pathname.startsWith("/blog")}
+                    selected={pathname.startsWith("/blog")} 
                   />
                 </>
               )}
               {routes["/gallery"] && (
                 <>
-                  <ToggleButton
+                  <ToggleButton 
                     className="s-flex-hide"
                     prefixIcon="gallery"
                     href="/gallery"
-                    label={gallery.label}
-                    selected={pathname.startsWith("/gallery")}
+                    label={gallery.label} 
+                    selected={pathname.startsWith("/gallery")} 
                   />
-                  <ToggleButton
+                  <ToggleButton 
                     className="s-flex-show"
                     prefixIcon="gallery"
                     href="/gallery"
-                    selected={pathname.startsWith("/gallery")}
+                    selected={pathname.startsWith("/gallery")} 
                   />
                 </>
               )}
@@ -147,17 +158,23 @@ export const Header = () => {
           </Flex>
         </Flex>
         <Flex fillWidth horizontal="end" vertical="center">
-          <Flex
+          <Flex 
             paddingRight="12"
             horizontal="end"
             vertical="center"
             textVariant="body-default-s"
             gap="20"
           >
-            <Flex hide="s">{display.time && <TimeDisplay timeZone={person.location} />}</Flex>
+            <Flex hide="s">{display.time  && <TimeDisplay timeZone={person.location}  />}</Flex>
           </Flex>
         </Flex>
       </Flex>
+ 
+      {/* 添加音频标签 */}
+      <audio ref={audioRef} loop style={{ display: 'none' }}>
+        <source src="/audio/music.m4a" type="audio/mp4" />
+        Your browser does not support the audio element.
+      </audio>
     </>
   );
 };
