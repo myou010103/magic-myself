@@ -170,7 +170,7 @@ export const Header = () => {
         </Flex>
       </Flex>
  
-      {/* 添加音频标签 */}
+      {/yes/}
       <audio ref={audioRef} loop style={{ display: 'none' }}>
         <source src="/audio/music.m4a" type="audio/mp4" />
         Your browser does not support the audio element.
