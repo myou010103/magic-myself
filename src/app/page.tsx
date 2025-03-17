@@ -42,7 +42,7 @@ export default function Home() {
         <Column maxWidth="m" gap="xl" horizontal="center">
     {/* 音频元素 */}
     <audio controls style={{ margin: "20px 0" }}>
-        <source src="/audio/music.m4a" type="audio/mp4" />
+        <source src="/audio/music.mp4" type="audio/mp4" />
         您的浏览器不支持音频播放功能。
     </audio>
             <script
