@@ -18,6 +18,11 @@ const newsletter = {
   description: (
     <>
      Life is like a game of chess; once you make a move, there’s no turning back.
+  {/* 添加音频播放器 */}
+      <audio controls>
+        <source src={audio/music.m4a}  type="audio/mp4"/>
+        Your browser does not support the audio element.
+      </audio>
   
    </>
   ),
